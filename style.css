@@ -1,0 +1,85 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+/* Style du tamagotchi */
+body {
+	font-family: 'Zilla Slab Highlight', cursive;
+	font-weight: 400;
+	font-size: 5em;
+	color: blue;
+	background: rgb(34,195,90);
+	background: linear-gradient(0deg, rgba(34,195,90,1) 0%, rgba(45,253,253,1) 100%);
+}
+button {
+	font-family: 'Zilla Slab Highlight', cursive;
+	font-size: 1em;
+	color: blue;
+}
+input {
+	left: 100;
+	font-family: 'Zen Dots', cursive;
+	font-size: 1em;
+	color: green;
+}
+.parent {
+	width:100%;
+	position: absolute;
+	top: 5;
+	left: 0;
+	z-index:0;
+}
+.titraille {
+	width:70%;
+	position: relative;
+	top: 0;
+	left: 1000;
+	z-index:2;
+}
+
+#doghouse {
+	width:50%;
+	position: relative;
+	top:300px;
+	z-index:1;
+}
+
+.form {
+	font-weight: 400;
+	font-size: 3em;
+	color: blue;
+}
+
+span {
+	font-weight: 600;
+}
+
+#tamagotchi {
+	display: inline-block;
+	position: relative;
+	margin-left: 5%;
+	z-index:3;
+}
+
+#tama {
+	width : 50%;
+	position: relative;
+	z-index:2;
+}
+
+#controls img {
+	width : 5%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.resize {
+	width: 70px;
+	position: relative;
+	height: auto;
+}
+
+ul {
+  list-style-type: none;
+	top: 0;
+	left: 1000;
+}

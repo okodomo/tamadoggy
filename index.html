@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
+	<title>Tama</title>
+</head>
+<body>
+	<img src="https://raw.githubusercontent.com/aliceokodomo/tama/main/welcome2tamadoggybigger.png" alt=titraille" class="titraille">
+	<img src="https://raw.githubusercontent.com/aliceokodomo/tama/main/garden.png" alt="background" class="parent">
+	<img src="https://raw.githubusercontent.com/aliceokodomo/tama/main/doghouse.png" id="doghouse">
+	<div id="tamagotchi">
+		<img id="tama" alt="Tama" src="https://raw.githubusercontent.com/aliceokodomo/tama/main/alivedog.png" class="resize">
+		<img id="play" alt="Ballon" src="https://raw.githubusercontent.com/aliceokodomo/tama/main/ball-01.png" class="resize">
+	</div>
+
+	<div id="controls">
+		<ul>
+			<li>Appétit > <span id="hunger">0</span></li>
+			<li>Soif > <span id="thirst">0</span></li>
+			<li>Maladie > <span id="sickness">0</span></li>
+			<li>Bonheur > <span id="happiness">100</span></li>
+		</ul>
+		<form>
+			<input type="number" name = "addClick" id="food" value="0"/>
+			<button type = "button" class="pure-button pure-button-primary" onclick = "addToNumber()" id="go">I am hungry!</button>
+			<img src="https://raw.githubusercontent.com/aliceokodomo/tama/main/foodbowlfull.png" alt="Foodbowl" class="bowls">
+			<input type="text" id="water" value="0"/>
+			<button id="goWater">I am thirsty !</button>
+			<img src="https://raw.githubusercontent.com/aliceokodomo/tama/main/fullwater.png" alt="waterbowl" class="bowls">
+			<input type="text" id="pills" value="0"/>
+			<button id="goPills">Make me feel better !</button>
+			<img alt="pill" src="https://raw.githubusercontent.com/aliceokodomo/tama/main/pill.png" id="picto">
+		</form>
+	</div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
