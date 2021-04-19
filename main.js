@@ -1,47 +1,50 @@
-			var hunger = document.getElementById("hunger"); // L'élément span de la faim
+var hunger = document.getElementById("hunger"); // L'élément span de la faim
 			var thirst = document.getElementById("thirst"); // L'élément span de la soif
 			var happiness = document.getElementById("happiness"); // L'élément span du bonheur
 			var sickness = document.getElementById("sickness"); // L'élément span de la maladie
 			var tama = document.getElementById("tama"); // L'image de Tama
 			var play = document.getElementById ("play"); //L'image du ballon
 
+
+
 			// tamaLife contrôle le cycle de vie de Tama
 			function tamaLife(){
-				// Pour ajouter 5 à la faim et la soif, on modifie hunger.textContent = le contenu textuel du span
+				// Pour ajouter 5 à la faim, la soif et la maladie, on modifie hunger, thirst ou sickness.textContent = le contenu textuel du span
 				// Et on convertit bien la valeur en nombre entier avec parseInt pour éviter un bug
-				hunger.textContent = parseInt(hunger.textContent) + 5;
-				thirst.textContent = parseInt(thirst.textContent) + 5;
-				sickness.textContent = parseInt(sickness.textContent) + 1;
+				hunger.textContent  = parseInt(hunger.textContent) + 5;
+				thirst.textContent  = parseInt(thirst.textContent) + 5;
+				sickness.textContent  = parseInt(sickness.textContent) + 5;
 				// Même chose => Le contenu textuel du bonheur = la valeur entière du bonheur -10
 				happiness.textContent = parseInt(happiness.textContent) - 10;
 
+
 				// Si Tama est malheureux
 				if (parseInt(hunger.textContent) >= 70 || parseInt(happiness.textContent) <= 30){
-					tama.src = "https://raw.githubusercontent.com/aliceokodomo/tama/main/unhappydog.png";
+					tama.src = "https://github.com/aliceokodomo/tama/blob/main/unhappydog.png?raw=true";
 				}
 				if (parseInt(thirst.textContent) >= 70 || parseInt(happiness.textContent) <= 30){
-					tama.src = "https://raw.githubusercontent.com/aliceokodomo/tama/main/unhappydog.png";
+					tama.src = "https://github.com/aliceokodomo/tama/blob/main/unhappydog.png?raw=true";
 				}
 				if (parseInt(sickness.textContent) >= 70 || parseInt(happiness.textContent) <= 30){
-					tama.src = "https://raw.githubusercontent.com/aliceokodomo/tama/main/unhappydog.png";
+					tama.src = "https://github.com/aliceokodomo/tama/blob/main/unhappydog.png?raw=true";
 				}
 				// Sinon Tama est normal
-			else{
-					tama.src = "https://raw.githubusercontent.com/aliceokodomo/tama/main/alivedog.png";
+			else {
+					tama.src = "https://github.com/aliceokodomo/tama/blob/main/alivedog.png?raw=true";
 				}
 
 
 				// Si Tama est mort
 				if (parseInt(happiness.textContent) <= 0 || parseInt(hunger.textContent) >= 100){
-					tama.src = "https://raw.githubusercontent.com/aliceokodomo/tama/main/deaddog.png";
+					tama.src = "https://github.com/aliceokodomo/tama/blob/main/deaddog.png?raw=true";
 					if (parseInt(happiness.textContent) <= 0 || parseInt(thirst.textContent) >= 100){
-						tama.src = "https://raw.githubusercontent.com/aliceokodomo/tama/main/deaddog.png";
+						tama.src = "https://github.com/aliceokodomo/tama/blob/main/deaddog.png?raw=true";
 						if (parseInt(happiness.textContent) <= 0 || parseInt(sickness.textContent) >= 100){
-							tama.src = "https://raw.githubusercontent.com/aliceokodomo/tama/main/deaddog.png";
+							tama.src = "https://github.com/aliceokodomo/tama/blob/main/deaddog.png?raw=true";
 					clearInterval(interval); // On arrête l'intervalle
 					// Et on enlève les écouteurs d'évènements : Si Tama est mort, on ne peux plus interagir avec lui
 					tama.removeEventListener("mouseover", setHappiness);
-					play.addEventListener("mouseover", setHappiness);
+					play.removeEventListener("mouseover", setHappiness);
 					document.getElementById("go").removeEventListener("click", setFood);
 					document.getElementById("goWater").removeEventListener("click", setWater);
 					document.getElementById("goPills").removeEventListener("click", setPills);
@@ -51,11 +54,25 @@
 
 	}
 
+
 			// setHappiness contrôle le bonheur de Tama
 			function setHappiness(){
 				document.getElementById("happiness").textContent = "100"; // Le bonheur passe à 100
-				tama.src = "https://raw.githubusercontent.com/aliceokodomo/tama/main/happydog.png"; // Tama est tout content
+				tama.src = "https://github.com/aliceokodomo/tama/blob/main/happydog.png?raw=true"; // Tama est tout content
 			}
+
+			//function setBolQuantity(){
+			//document.getElementById("food") = "100";
+			//bol.src = "https://github.com/aliceokodomo/tama/blob/main/foodbowl123-04.png?raw=true";
+
+
+				//document.getElementById("food").textContent = "50";
+				//bol.src = "https://github.com/aliceokodomo/tama/blob/main/foodbowl123-05.png?raw=true";
+
+			 //document.getElementById("food").textContent = "0";
+				//bol.src = "https://github.com/aliceokodomo/tama/blob/main/foodbowl123-06.png?raw=true";
+
+			//}
 
 			// setFood contrôle la nourriture de Tama
 			function setFood(){
@@ -95,4 +112,4 @@
 			document.getElementById("goPills").addEventListener("click", setPills);
 
 			// Mise en place de l'intervalle
-			var interval = setInterval(tamaLife, 2000);
+			var interval = setInterval(tamaLife, 3000);
