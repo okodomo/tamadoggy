@@ -1,7 +1,7 @@
 # tama
 tama game by Céline and Alice
 TAMADOGGY
-
+https://okodomo.github.io/tamadoggy/
 how to play?
 
 Feed , play, cherish, give it pills if it is sick, give water to the dog so it does not die.
