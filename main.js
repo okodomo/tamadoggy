@@ -1,11 +1,9 @@
-var hunger = document.getElementById("hunger"); // L'élément span de la faim
+			var hunger = document.getElementById("hunger"); // L'élément span de la faim
 			var thirst = document.getElementById("thirst"); // L'élément span de la soif
 			var happiness = document.getElementById("happiness"); // L'élément span du bonheur
 			var sickness = document.getElementById("sickness"); // L'élément span de la maladie
 			var tama = document.getElementById("tama"); // L'image de Tama
 			var play = document.getElementById ("play"); //L'image du ballon
-
-
 
 			// tamaLife contrôle le cycle de vie de Tama
 			function tamaLife(){
@@ -16,7 +14,6 @@ var hunger = document.getElementById("hunger"); // L'élément span de la faim
 				sickness.textContent  = parseInt(sickness.textContent) + 5;
 				// Même chose => Le contenu textuel du bonheur = la valeur entière du bonheur -10
 				happiness.textContent = parseInt(happiness.textContent) - 10;
-
 
 				// Si Tama est malheureux
 				if (parseInt(hunger.textContent) >= 70 || parseInt(happiness.textContent) <= 30){
@@ -32,7 +29,6 @@ var hunger = document.getElementById("hunger"); // L'élément span de la faim
 			else {
 					tama.src = "https://github.com/aliceokodomo/tama/blob/main/alivedog.png?raw=true";
 				}
-
 
 				// Si Tama est mort
 				if (parseInt(happiness.textContent) <= 0 || parseInt(hunger.textContent) >= 100){
@@ -53,7 +49,6 @@ var hunger = document.getElementById("hunger"); // L'élément span de la faim
 		}
 
 	}
-
 
 			// setHappiness contrôle le bonheur de Tama
 			function setHappiness(){
